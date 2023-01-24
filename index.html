@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <title> lms scientific calculator</title>
+    </head>
+    <body>
+        <table class="scientific-calculator" cellspacing="0" cellpadding="1">
+            <thead>
+                <tr>
+                    <td colspan="5">
+                        <div id="display">
+                        <div>
+                            <div data-htmlprevalue></div>
+                            <div data-htmlcurrvalue></div>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="selection">
+                <tr>
+                    <td><button type="button" class="bolder" data-mode>DEG</button></td>
+                    <td><button type="button" class="bolder" data-mode>F-E</button></td>
+                    <td><button type="button" data-operator>$</button></td>
+                    <td><button type="button" data-operator>rs</button></td>
+                    <td><button type="button" onclick="is_on(this)" style="background-color: brown;">ON</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="l-opacity" data-memory>MC</button></td>
+                    <td><button type="button" class="l-opacity" data-memory>MR</button></td>
+                    <td><button type="button" class="bolder" data-memory>M+</button></td>
+                    <td><button type="button"  class="bolder" data-memory>M-</button></td>
+                    <td><button type="button" class="bolder" data-memory>MS</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type ="button" data-mode>trigonometry</button></td>
+                    <td colspan="2"><button type ="button" data-mode>function</button></td>
+                    <td><button onclick="gethistory()" class="logo"><i class="fa fa-history" aria-hidden="true"></i></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" data-operator>2nd</button></td>
+                    <td><button type="button" data-operator="">pi</button></td>
+                    <td><button type="button" data-operator>e</button></td>
+                    <td><button type="button" data-clear>c</button></td>
+                    <td><button type="button" data-delete>#</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" data-operator>x2</button></td>
+                    <td><button type="button" data-operator>1/x</button></td>
+                    <td><button type="button" data-operator>|x|</button></td>
+                    <td><button type="button" data-operator>exp</button></td>
+                    <td><button type="button" data-operator>mod</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" data-operator>sqrt</button></td>
+                    <td><button type="button" data-operator>(</button></td>
+                    <td><button type="button" data-operator>)</button></td>
+                    <td><button type="button" data-operator>n!</button></td>
+                    <td><button type="button" data-operator>/</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" data-operator>x**y</button></td>
+                    <td><button type="button" class="number" data-number="7">7</button></td>
+                    <td><button type="button" class="number" data-number="8">8</button></td>
+                    <td><button type="button"  class="number" data-number="9">9</button></td>
+                    <td><button type="button" data-operator>x</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" data-operator>10**x</button></td>
+                    <td><button type="button" class="number" data-number>4</button></td>
+                    <td><button type="button" class="number" data-number>5</button></td>
+                    <td><button type="button"  class="number" data-number>6</button></td>
+                    <td><button type="button" data-operator data-number>-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" data-operator>log</button></td>
+                    <td><button type="button" class="number" data-number>1</button></td>
+                    <td><button type="button" class="number" data-number>2</button></td>
+                    <td><button type="button"  class="number" data-number>3</button></td>
+                    <td><button type="button" data-operator>+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" data-operator>ln</button></td>
+                    <td><button type="button" data-operator>+/-</button></td>
+                    <td><button type="button" class="number" data-number>0</button></td>
+                    <td><button type="button" data-operator>.</button></td>
+                    <td><button type="button" data-equal>=</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- this section will be dynamically typed by javascript for showing history -->
+        <div class = "history"></div>
+        <script src="demo.js"></script>
+    </body>
+</html>
